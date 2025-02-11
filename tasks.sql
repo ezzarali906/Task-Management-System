@@ -37,6 +37,14 @@ CREATE TABLE task_manager.reminders (
     created_at TIMESTAMP DEFAULT NOW()
 );
 
+CREATE TABLE task_manager.users (
+    user_id SERIAL PRIMARY KEY,
+    email VARCHAR(255),
+    pass_word VARCHAR(255),
+    user_role VARCHAR(50) CHECK (user_role IN ('user','admin')) DEFAULT 'user',
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
 -- 4. Data Insertion
 
 -- Insert Sample Tasks
