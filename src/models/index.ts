@@ -18,3 +18,9 @@ export interface note {
   task_id: number;
   note_id: number;
 }
+
+export interface user{
+  email:string;
+  pass_word:string;
+  user_role:string;
+}
